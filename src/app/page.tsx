@@ -2,14 +2,25 @@ import {
   ElevatedButton,
   FilledButton,
   FilledTonalButton,
+  IconButton,
   OutlinedButton,
   TextButton,
 } from "@/components/button/button";
-import Image from "next/image";
+import { Fab } from "@/components/fab/fab";
+import { Icon } from "@/components/icon/icon";
+
 
 export default function Home() {
   return (
     <div className="grid grid-flow-row grid-cols-2 gap-2 m-2">
+      <Fab size="large">
+        <Icon slot="icon">edit</Icon>
+      </Fab>
+      
+      <IconButton>
+        <Icon>add</Icon>
+      </IconButton>
+
       <FilledButton>
         Click me
         <svg slot="icon" viewBox="0 0 48 48">

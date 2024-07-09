@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@lit/react": "^1.0.5",
     "@material/web": "^1.5.1",
     "next": "14.2.4",
     "react": "^18",

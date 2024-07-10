@@ -15,12 +15,7 @@ import { Dialog } from "@/components/dialog/dialog";
 import { Fab } from "@/components/fab/fab";
 import { Icon } from "@/components/icon/icon";
 import { MdDialog } from "@material/web/dialog/dialog";
-import { useEffect, useRef } from "react";
-import { styles as typescaleStyles } from '@material/web/typography/md-typescale-styles.js';
-
-
-
-
+import { useRef } from "react";
 
 export default function Home() {
   const dialogRef = useRef<MdDialog>(null);
@@ -34,22 +29,26 @@ export default function Home() {
     console.log(e.target.value);
   };
 
-  useEffect(() => {
-    if (typeof document !== 'undefined') {
-      const styleElement = document.createElement('style');
-      console.log(typescaleStyles.cssText);
-      var styleText = typescaleStyles.cssText;
+  // Don't use this method to inject text styles from the design system
+  //
+  // useEffect(() => {
+  //   if (typeof document !== 'undefined') {
+  //     const styleElement = document.createElement('style');
+  //     console.log(typescaleStyles.cssText);
+  //     var styleText = typescaleStyles.cssText;
 
-      styleText = styleText.replace("@layer{", "")
+  //     styleText = styleText.replace("@layer{", "")
 
-      styleElement.textContent = styleText;
-      document.head.appendChild(styleElement);
-    }
-  }, []);
+  //     styleElement.textContent = styleText;
+  //     document.head.appendChild(styleElement);
+  //   }
+  // }, []);
 
   return (
     <>
-      <h2 className="text-center text-on-primary bg-primary-container p-8 m-2 rounded-xl md-typescale-display-large">Test</h2>
+      <h2 className="text-center text-on-primary bg-primary-container p-8 m-2 rounded-xl text-display-small">
+        Test
+      </h2>
       <div className="grid grid-flow-row grid-cols-2 gap-2 m-2">
         <Fab size="medium">
           <Icon slot="icon">edit</Icon>

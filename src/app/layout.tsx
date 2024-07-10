@@ -19,8 +19,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={roboto.className + " bg-surface"}>{children}</body>
+    <html lang="en" className="bg-surface text-on-surface">
+      <body className={roboto.className}>{children}</body>
     </html>
   );
 }

@@ -49,7 +49,7 @@ export default function Home() {
   return (
     <>
       <h2 className="text-center text-on-primary bg-primary-container p-8 m-2 rounded-xl text-display-small">
-        Next.js + Material Web Components
+        Next.js + Material Web 
       </h2>
       <div className="grid grid-flow-row grid-cols-2 gap-2 m-2">
         <Fab size="medium">

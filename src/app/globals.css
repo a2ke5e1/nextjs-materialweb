@@ -116,8 +116,4 @@
   .text-balance {
     text-wrap: balance;
   }
-
-  body {
-    color: var(--md-sys-color-on-surface)
-  }
 }

@@ -11,9 +11,11 @@ import {
   OutlinedIconButton,
   TextButton,
 } from "@/components/button/button";
+import { Checkbox } from "@/components/checkbox/checkbox";
 import { Dialog } from "@/components/dialog/dialog";
 import { Fab } from "@/components/fab/fab";
 import { Icon } from "@/components/icon/icon";
+import { MdCheckbox } from "@material/web/checkbox/checkbox";
 import { MdDialog } from "@material/web/dialog/dialog";
 import { useRef } from "react";
 
@@ -47,7 +49,7 @@ export default function Home() {
   return (
     <>
       <h2 className="text-center text-on-primary bg-primary-container p-8 m-2 rounded-xl text-display-small">
-        Test
+        Next.js + Material Web Components
       </h2>
       <div className="grid grid-flow-row grid-cols-2 gap-2 m-2">
         <Fab size="medium">
@@ -94,6 +96,15 @@ export default function Home() {
             <path d="M6 40V8l38 16Zm3-4.65L36.2 24 9 12.5v8.4L21.1 24 9 27Zm0 0V12.5 27Z" />
           </svg>
         </ElevatedButton>
+
+        <div className="flex flex-row gap-2 items-center text-center">
+          <Checkbox id="checkbox-two" touch-target="wrapper"></Checkbox>
+          <label htmlFor="checkbox-two">Checkbox two</label>
+
+          <Checkbox disabled></Checkbox>
+          <Checkbox checked></Checkbox>
+          <Checkbox indeterminate></Checkbox>
+        </div>
 
         <Dialog ref={dialogRef}>
           <div slot="headline">Dialog title</div>
